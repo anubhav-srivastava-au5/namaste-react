@@ -13,4 +13,22 @@ result.
 Framework is some line of code which we can use in same manner to get the result as it displays.
 
 3) What is CDN? Why do we use it?
-A3) CDN stands for content delivery network.
+A3) CDN stands for content delivery network. We use CDN to reduce latency.
+    It is used to improve the time which web application takes to load content and media.
+
+4) Why is React known as React?
+A4) React is a library created by facebook. It is called react because it auto update the module which got
+updated rather than updating whole page to update the changes.
+
+5) What is crossorigin in script tag?
+A5) 
+
+
+6) What is diference between React and ReactDOM?
+A6)
+
+7) What is difference between react.development.js and react.production.js files via CDN?
+A7)
+
+8) What is async and defer?
+A8)
