@@ -1,0 +1,16 @@
+                                        Chapter 01 - Inception
+
+
+
+1) What is Emmet?
+A1) Emmet refers to abbrevations. i.e. Few lines of code produced with 1 line or lesser is known as Emmet. 
+Emmet is nothing but a short form to right big line of code.
+
+2) Difference between a Library and Framework?
+A2) Library is a function or a class which we can use in our code as we want. 
+Library is some line of code which is written to make our work easier. We can use library to get our desired
+result.
+Framework is some line of code which we can use in same manner to get the result as it displays.
+
+3) What is CDN? Why do we use it?
+A3) CDN stands for content delivery network.

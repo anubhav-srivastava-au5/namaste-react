@@ -1,0 +1,94 @@
+Q1) What is NPM?
+A1) NPM means node package manager. Its a library from which we can get any javascript software package.
+
+Q2) What is parcel/webpack? Why do we need it?
+A2) Parcel is a bundler which provides many features. like cleaning our code, dev and production build ,
+super fast build algorithm , Image optimisation, caching while development , create server , zero config.
+Also compatible with older versions of browser.
+
+We need parcel because it provides full build setup as well as helps in debugging error.
+
+Q3) What is `.parcel-cache?
+A3) Parcel cache is a folder in which parcel keeps data so that it can re-build application in less time.
+
+Q4)  What is `npx` ?
+A4) npx stands for node package execute. It can execute any package present inside npm library without even 
+installing that package.
+
+Q5) What is difference between `dependencies` vs `devDependencies`?
+A5) The major difference between them are devDependencies are not moved to production they are used by developer
+on there machine which helps them in coding while dependencies are main packages which are required to run
+application on to other environment.
+
+Q6) What is Tree Shaking?
+A6) Parcel analysis each and every import and export in an application and removes unnecessary part which is 
+called tree shaking.
+
+Q7) What is Hot Module Replacement?
+A7) HMR which is also knows as hot module replacement improves specific modules in browser at runtime so that 
+we dont need to refresh whole page in an application.
+
+Q8) List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words?
+A8) 5 superpowers of parcel are:-
+a) Cleaning our code. -> It cleans our code by removing all console.log. and checks which package are not in use 
+hence, remove them while building application. 
+b) It can create dev and production build.
+c) Zero config. -> We didn't want to config anything to get it running we can simpliy install and use.
+d) Compatible with older version of browser and can config. them through package.json. -> We can update in 
+which browser our application should work.
+e) Can create https server. -> we can see if any error we will face when project is live.
+
+Q9) What is `.gitignore`? What should we add and not add into it?
+A9) .gitignore is a file which helps git to understand what all files should not be included while pushing
+code in github.
+We should add all the files which cannot be auto-generated. e.g. -> package-lock.json file should not be kept
+in .gitignore.
+node_modules should be kept in .gitignore because it can auto-generated with cmd npm i.
+dist and parcel-cache folder should be kept in .gitignore because we can generate them with build cmd.
+
+Q10) What is the difference between `package.json` and `package-lock.json`?
+A10) Package.json file is used to keep details about project like author name , project 
+description, license, what all dependencies and dev-dependencies used.
+while Package-lock.json file used to keep track of the dependencies and updated version of them, it is also used
+to create node-modules tree structure which helps in creating same project on other person machine.
+
+Q11) Why should I not modify `package-lock.json`?
+A11) Package-lock.json is a auto-generated file and we should not edit it. It contains modules tree structure
+and exact version of each dependency. It also track sub dependency as well. Also we should not keep it in 
+.gitignore , we should push the package-lock.json file on github.
+
+Q12) What is `node_modules` ? Is it a good idea to push that on git?
+A12) node_modules is a folder name created by npm where it can keep all the dependency (sub-dependency) required
+in the project.
+                No, we should not push node_modules on git , bcoz. we should not push anything which we can 
+re-generate. We can get node_modules anywhere with the command npm i.
+
+Q13) What is the `dist` folder?
+A13) The dist folder contains the minimised (source) code. Which is used on production environment.
+
+Q14) What is `browserlists`?
+A14) browserlists is the tool which we configure in package.json so that we can configure application will
+work in which browser and at what versions.
+
+# Read Questions:
+1) Read about dif bundlers: vite, webpack, parcel?
+A1) Bundlers meaning in react is to bundle all files using tool like webpack,parcel, etc. It bundles code into
+1 single file which we can upload on uat or production.
+vite -> vite is a web based IDE that is designed to be fast and lightweight. It is a cloud based IDE that runs on
+any machine and is accessible from any browser.
+
+Webpack -> Webpack is a module bundler for javascript applications. It is used to bundle javascript file
+for usage in browsers.
+
+parcel -> Parcel is a zero configuration web application bundler that is fast and easy to use.
+
+2) Read about: ^ - caret and ~ - tilda?
+A2) caret(^) -> It is used to update automatically minor and patch version of dependencies.
+tilda(~) -> It is used to update patch version of dependencies.
+e.g. ->
+x.y.z e.g. 1.2.3 -> Here 1 is major version which generally happens when they have major breaking changes,
+2 is minor version which happens when there are smaller updates or old functionalities deprecated,
+3 is patch version which means small bug fixes.
+
+3) Read about Script types in html (MDN Docs)?
+A3) 
