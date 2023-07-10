@@ -1,7 +1,5 @@
                                         Chapter 01 - Inception
 
-
-
 1) What is Emmet?
 A1) Emmet refers to abbrevations. i.e. Few lines of code produced with 1 line or lesser is known as Emmet. 
 Emmet is nothing but a short form to right big line of code.
@@ -12,23 +10,41 @@ Library is some line of code which is written to make our work easier. We can us
 result.
 Framework is some line of code which we can use in same manner to get the result as it displays.
 
+Library can be used anywhere in our code for some part of it. while framework are integrated and we need
+to design requirement according to the framework.
+
 3) What is CDN? Why do we use it?
 A3) CDN stands for content delivery network. We use CDN to reduce latency.
     It is used to improve the time which web application takes to load content and media.
+
+whenever we request anything through cdn it looks for the nearest server which can provide the package/
+library/image or anything to the requested in less time.
 
 4) Why is React known as React?
 A4) React is a library created by facebook. It is called react because it auto update the module which got
 updated rather than updating whole page to update the changes.
 
 5) What is crossorigin in script tag?
-A5) 
+A5) crossorigin in script tag specify that whether browser should fetch js file with cors enabled or not.
+cors helps to get data from different domain or url.
+by default crossorigin is anonymous.
 
 
 6) What is diference between React and ReactDOM?
-A6)
+A6) React is used to create UI (user interfaces) .React allows developers to create reusable components
+and helps them to render efficiently.
+while reactdom is used to interact react code with browser DOM.
 
 7) What is difference between react.development.js and react.production.js files via CDN?
-A7)
+A7) react.developement.js files via cdn can be used when we are working in local environment bcoz it consists
+of debuggging features while react.production.js files via CDN helps in optimized performance and reduced file 
+size.
 
 8) What is async and defer?
-A8)
+A8) We use these in script tag to know when to load the js file.
+generally what happens is when we execute html and we get any js file it load the js file and execute it 
+and after that it execute the further html file.
+while when we mention async keyword in script tag it loads the js file while executing html file and then
+first it executes the js file and then executes the remaining html file.
+while when we mention defer keyword in script tag it loads the js file and completes the execution of html file 
+after that executes the js file.
