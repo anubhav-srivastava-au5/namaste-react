@@ -1,5 +1,6 @@
 Q1) What is NPM?
 A1) NPM means node package manager. Its a library from which we can get any javascript software package.
+NPM handles all the node packages.
 
 Q2) What is parcel/webpack? Why do we need it?
 A2) Parcel is a bundler which provides many features. like cleaning our code, dev and production build ,
@@ -84,11 +85,14 @@ parcel -> Parcel is a zero configuration web application bundler that is fast an
 
 2) Read about: ^ - caret and ~ - tilda?
 A2) caret(^) -> It is used to update automatically minor and patch version of dependencies.
-tilda(~) -> It is used to update patch version of dependencies.
+tilda(~) -> It is used to update major version of dependencies.
 e.g. ->
 x.y.z e.g. 1.2.3 -> Here 1 is major version which generally happens when they have major breaking changes,
 2 is minor version which happens when there are smaller updates or old functionalities deprecated,
 3 is patch version which means small bug fixes.
 
 3) Read about Script types in html (MDN Docs)?
-A3) 
+A3) script types are crossorigin,defer,async ,etc how we can use them and adding which keyword makes what 
+changes in the system.
+
+how differently it parse and load the js file.
