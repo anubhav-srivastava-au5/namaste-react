@@ -1,0 +1,107 @@
+Q1) What is JSX?
+A1) JSX(JavaScript XML) is an extension syntax that allows to write html like code inside javascript code.
+Under the hood, jsx code gets transformed into regular javascript code before going to browser, babel   
+plays important role in it. babel transpile jsx code to compatible js code that browser can understand.
+
+JSX also allows to write any js within "{}" curly braces.   
+
+eg:-> write below code in jsx file.
+const name = 'Alice';
+const element = <h1>Hello, {name}!</h1>;
+
+Q2) Superpowers of JSX?
+A2) 1) It reduces effort of writing create element everytime we need to create an element.
+2) It allow us to write any js inside curly braces "{}".
+3) It provides reuseability and maintainability of components.
+4) It provides component compositions means we can next one component inside other which helps in creating
+complex UI.
+
+
+Q3) Role of type attribute in script tag?What options can i use there?
+A3) Generally and default type attribute is text/javascript. It helps browser understand how to 
+interpret and execute script code.
+other options are:
+module -> we use to use import and export in js file.
+application/json -> we tell browser it's a json data inside script file.
+other scripting languages -> text/python, text/php although its recommended to use js for client side 
+scripting.
+
+
+Q4) {TitleComponent} VS {<TitleComponent/>} VS {<TitleComponent></TitleComponent>} in JSX?
+A4) In JSX, there are a few different ways to render a React component:
+
+{TitleComponent}: This syntax is used to render the TitleComponent as a plain JavaScript expression. 
+It does not include any JSX-specific syntax. This is typically used when you want to reference the 
+component without rendering it, such as passing it as a prop to another component or storing it in a 
+variable.
+Example:
+const MyComponent = () => {
+  const title = <TitleComponent />;
+  return <div>{title}</div>;
+};
+
+
+{<TitleComponent/>}: This syntax is used to render the TitleComponent as a self-closing JSX element. 
+It is the most common way to render a component and is equivalent to using <TitleComponent />. 
+This syntax is used when the component does not have any children.
+Example:
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent />
+    </div>
+  );
+};
+
+
+{<TitleComponent></TitleComponent>}: This syntax is used to render the TitleComponent with opening and 
+closing tags. It is used when the component has children elements or content.
+Example:
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent>
+        <h1>Hello, World!</h1>
+      </TitleComponent>
+    </div>
+  );
+};
+
+
+In general, using self-closing JSX elements (<TitleComponent />) is the preferred way to render components 
+unless you have specific needs for referencing or manipulating the component as a JavaScript expression 
+({TitleComponent}) or when the component has children (<TitleComponent></TitleComponent>).
+
+
+proper example of {<TitleComponent></TitleComponent>}:
+
+ Here's a proper example of rendering a TitleComponent with opening and closing tags in JSX:
+
+const TitleComponent = ({ children }) => {
+  return <h1>{children}</h1>;
+};
+
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent>
+        Hello, World!
+      </TitleComponent>
+    </div>
+  );
+};
+In this example, we have a TitleComponent that accepts children as a prop. The TitleComponent renders an 
+<h1> heading element and uses the children prop as its content.
+
+Inside the MyComponent, we render the TitleComponent with opening and closing tags 
+(<TitleComponent></TitleComponent>). The text "Hello, World!" is passed as the content between the 
+opening and closing tags of the TitleComponent. This content becomes the children prop of the 
+TitleComponent, and it is rendered inside the <h1> element.
+
+The rendered output in the browser would be:
+
+<div>
+  <h1>Hello, World!</h1>
+</div>
+This syntax is useful when you need to pass additional content or nested components as children to the 
+TitleComponent. It allows you to encapsulate and compose more complex UI structures within your components.
