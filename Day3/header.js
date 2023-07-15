@@ -5,32 +5,28 @@ import userIcon from "./user-icon.png"
 
 const Logo=()=>{
     return (
-        <img src={logo} alt="company logo" width={50} height={60}/>
+        <img src={logo} alt="company logo" width={50} height={60} style={{ float: 'left' }} />
     )
 }
 
 const SearchBar=()=>{
     return (
-        <input type="text" justifyContent="center" placeholder="Search Here..."/>
+        <input type="text" placeholder="Search Here..." style={{display:'table', margin:'auto'}} />
     )
 }
 
 const UserIcon=()=>{
     return (
-        <img src={userIcon} alt ="user icon" width={50} height ={60} top={8} fontSize={18} position="absolute" right={16} />
+        <img src={userIcon} alt ="user icon" width={50} height ={60} style={{ float: 'right', margin:-20 }} />
     )
 }
-// position: absolute;
-// top: 8px;
-// right: 16px;
-// font-size: 18px;
 const DivComponent=()=>{
     return (
-        <header position="reative ">
+        <div>
             <Logo />
             <SearchBar />
             <UserIcon />
-        </header>
+        </div>
     )
 }
 
