@@ -1,3 +1,5 @@
+                    Chapter 03 - Assignment - Laying The Foundation
+
 Q1) What is JSX?
 A1) JSX(JavaScript XML) is an extension syntax that allows to write html like code inside javascript code.
 Under the hood, jsx code gets transformed into regular javascript code before going to browser, babel   

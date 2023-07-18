@@ -1,0 +1,197 @@
+                Chapter 04 - Assignment - Talk is cheap, show me the code
+
+
+1) Is JSX mandatory for react?
+A1) No, jsx is not mandatory for react , first what is jsx, jsx is nothing but a simpler way of writing 
+react.create element ; here babel comes into picture it only converts jsx to react.create element , hence
+it is not compulsary we can use react.create element instead of it we use it only bcoz it make work easier
+and also it provide '{}' which allow us to write any js inside it , which is cool.
+
+2) Is ES6 mandatory for react?
+A2) No, ES6 is not mandatory for react, though jsx will not work bcoz jsx was introduced in es6 , but as i
+mentioned before we can use react.create element for the same ,hence it is not mandatory.
+
+3) {TitleComponent} VS {<TitleComponent/>} VS {<TitleComponent></TitleComponent>} in JSX?
+A3) In JSX, there are a few different ways to render a React component:
+
+{TitleComponent}: This syntax is used to render the TitleComponent as a plain JavaScript expression. 
+It does not include any JSX-specific syntax. This is typically used when you want to reference the 
+component without rendering it, such as passing it as a prop to another component or storing it in a 
+variable.
+Example:
+const MyComponent = () => {
+  const title = <TitleComponent />;
+  return <div>{title}</div>;
+};
+
+
+{<TitleComponent/>}: This syntax is used to render the TitleComponent as a self-closing JSX element. 
+It is the most common way to render a component and is equivalent to using <TitleComponent />. 
+This syntax is used when the component does not have any children.
+Example:
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent />
+    </div>
+  );
+};
+
+
+{<TitleComponent></TitleComponent>}: This syntax is used to render the TitleComponent with opening and 
+closing tags. It is used when the component has children elements or content.
+Example:
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent>
+        <h1>Hello, World!</h1>
+      </TitleComponent>
+    </div>
+  );
+};
+
+
+In general, using self-closing JSX elements (<TitleComponent />) is the preferred way to render components 
+unless you have specific needs for referencing or manipulating the component as a JavaScript expression 
+({TitleComponent}) or when the component has children (<TitleComponent></TitleComponent>).
+
+
+proper example of {<TitleComponent></TitleComponent>}:
+
+ Here's a proper example of rendering a TitleComponent with opening and closing tags in JSX:
+
+const TitleComponent = ({ children }) => {
+  return <h1>{children}</h1>;
+};
+
+const MyComponent = () => {
+  return (
+    <div>
+      <TitleComponent>
+        Hello, World!
+      </TitleComponent>
+    </div>
+  );
+};
+In this example, we have a TitleComponent that accepts children as a prop. The TitleComponent renders an 
+<h1> heading element and uses the children prop as its content.
+
+Inside the MyComponent, we render the TitleComponent with opening and closing tags 
+(<TitleComponent></TitleComponent>). The text "Hello, World!" is passed as the content between the 
+opening and closing tags of the TitleComponent. This content becomes the children prop of the 
+TitleComponent, and it is rendered inside the <h1> element.
+
+The rendered output in the browser would be:
+
+<div>
+  <h1>Hello, World!</h1>
+</div>
+This syntax is useful when you need to pass additional content or nested components as children to the 
+TitleComponent. It allows you to encapsulate and compose more complex UI structures within your components.
+
+4) How can i write comments in jsx?
+A4) In same manner as we write in js , // for single line and /*  */ for multi line.
+
+5) What is <React.Fragment></React.Fragment> and <></> ?
+A5) React.Fragment or we call it empty tag is the tag used when we need to add multi tag inside main tag
+which is parent tag, as we dont want unnecessary div tag there, to wrap all tag inside it and then add them
+inside root div tag.
+
+6) What is virtual DOM?
+A6) It's a lightweight representation of actual DOM, stored in memory and is never rendered. It is used
+to create an image of actual dom which helps the actual dom (something like tree structure) as what is changed and helps
+in rendering it.
+
+7) What is Reconciliation in React?
+A7) The process of syncing Virtual DOM with the real DOM.
+
+Diffing Algorithm: The algorithm to find the minimum number of steps needed to update the real DOM.
+Assumptions for using the Diffing Algorithm:
+Two elements of different types will produce different trees.
+The developer can hint at which child elements may be stable across different renders with a key attribute.
+
+8) What is React Fiber?
+A8) React Fiber is an internal engine change geared to make React faster and smarter. The Fiber 
+reconciler, which became the default reconciler for React 16 and above, is a complete rewrite of React's 
+reconciliation algorithm to solve some long-standing issues in React.
+
+It is a new Reconciliation engine different from actual is added in react 16.
+
+9) Why we need keys in React? When do we need keys in React?
+A9) React uses key attribute to track the changes in the list. FYI, we dont need keys if tags are different.
+
+10) Can we use index as keys in React?
+A10) React uses key attribute to track the changes in the list.
+
+We might face following issues when we use index value as key attribute when creating a list:
+
+Performance Issues due to unnecessary re-renders.
+Issues in data mapping in case list items are sorted, filtered, or deleted.
+Let's understand the performance issue with the following example.
+
+Suppose we've a list of elements, with key attribute as index.
+<ul>
+  <li key=1>Milk</li>
+  <li key=2>Eggs</li>
+  <li key=3>Bread</li>
+</ul>
+Now, in case of any state change in the list, React just iterates over each list item in both the lists (React compares the Virtual DOM snapshot before the update and after the update), looks for changes and finally updates the RealDOM with only those changes.
+
+If we add an item to the end of the list, React no longer needs to re-render the first 3 list items which are same. It will just add a new list item at the end.
+<ul>
+  <li key=1>Milk</li>
+  <li key=2>Eggs</li>
+  <li key=3>Bread</li>
+  <li key=4>Butter</li>
+</ul>
+But suppose we add the new item at the beginning of the list.
+<ul>
+  <li key="1">Butter</li>
+  <li key="2">Milk</li>
+  <li key="3">Eggs</li>
+  <li key="4">Bread</li>
+</ul>
+Now, the key of remaining list items also changes, which makes React re-render all the elements again, instead of just adding a new item at the end.
+
+This can be avoided if we use some unique id as a key rather than index.
+Let's again consider the same previous example but this time by using a unique id as key.
+<ul>
+  <li key="12abc">Milk</li>
+  <li key="23bcd">Eggs</li>
+  <li key="34cde">Bread</li>
+</ul>
+Now even if we add element to the beginning or the end, we won't face an issue since keys are different.
+Since React tracks all list items with their key attribute, after adding a new element it would not re-render the previous list items.
+<ul>
+  <li key="45htl">Milk</li>
+  <li key="12abc">Milk</li>
+  <li key="23bcd">Eggs</li>
+  <li key="34bcd">Bread</li>
+  <li key="85kgt">Milk</li>
+</ul>
+In the below example, the first list is created using index as key and in the second using id as key.
+On deleting the item from the first list, we can see the whole list is getting re-rendered, while in the second list the original list remains intact only the targeted element is removed.
+So, in case the list is large with complex components it might cause a huge performance issue.
+
+
+When is it safe to use index as key in a list?
+Data is static.
+When you know reordering of lists: Sorting, Filtering is not going to happen.
+In the absence of an id.
+SUMMARY
+Always prefer using a unique id as value for the key attribute in a list and avoid using index.
+Using index might result in performance issues and data binding issues in case reordering in the form of sorting, filtering might happen.
+
+11) What is props in React? Ways to ?
+A11) Props in react refers to properties. It basically means the argument and parameter list in react in 
+functional components.
+
+It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. 
+It gives a way to pass data from one component to other components. It is similar to function arguments. 
+Props are passed to the component in the same way as arguments passed in a function.
+
+12) What is a Config Driven UI ?
+A12) In backend controls the UI , suppose we have a UI which shows carousels list of restaurents in different cities
+the data will be different so if in some cities there is no carousels it will not give any data from backend
+Hence, it will only show list of restaurents.
