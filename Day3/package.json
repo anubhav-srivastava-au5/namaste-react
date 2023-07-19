@@ -1,10 +1,10 @@
 {
-  "name": "day2",
+  "name": "day3",
   "version": "1.0.0",
-  "description": "day2 namaste react",
+  "description": "day3 namaste react",
   "scripts": {
-    "start" : "parcel Assignment2-code.html",
-    "build" : "parcel build Assignment2-code.html"
+    "start" : "parcel Assignment3-code.html",
+    "build" : "parcel build Assignment3-code.html"
   },
   "author": "Anubhav Srivastava",
   "license": "ISC",
