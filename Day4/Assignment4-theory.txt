@@ -100,8 +100,8 @@ inside root div tag.
 
 6) What is virtual DOM?
 A6) It's a lightweight representation of actual DOM, stored in memory and is never rendered. It is used
-to create an image of actual dom which helps the actual dom (something like tree structure) as what is changed and helps
-in rendering it.
+to create an image of actual dom which helps the actual dom (something like tree structure) as what is 
+changed and helps in rendering it.
 
 7) What is Reconciliation in React?
 A7) The process of syncing Virtual DOM with the real DOM.
@@ -136,9 +136,12 @@ Suppose we've a list of elements, with key attribute as index.
   <li key=2>Eggs</li>
   <li key=3>Bread</li>
 </ul>
-Now, in case of any state change in the list, React just iterates over each list item in both the lists (React compares the Virtual DOM snapshot before the update and after the update), looks for changes and finally updates the RealDOM with only those changes.
+Now, in case of any state change in the list, React just iterates over each list item in both the lists 
+(React compares the Virtual DOM snapshot before the update and after the update), looks for changes and 
+finally updates the RealDOM with only those changes.
 
-If we add an item to the end of the list, React no longer needs to re-render the first 3 list items which are same. It will just add a new list item at the end.
+If we add an item to the end of the list, React no longer needs to re-render the first 3 list items which 
+are same. It will just add a new list item at the end.
 <ul>
   <li key=1>Milk</li>
   <li key=2>Eggs</li>
@@ -152,7 +155,8 @@ But suppose we add the new item at the beginning of the list.
   <li key="3">Eggs</li>
   <li key="4">Bread</li>
 </ul>
-Now, the key of remaining list items also changes, which makes React re-render all the elements again, instead of just adding a new item at the end.
+Now, the key of remaining list items also changes, which makes React re-render all the elements again, 
+instead of just adding a new item at the end.
 
 This can be avoided if we use some unique id as a key rather than index.
 Let's again consider the same previous example but this time by using a unique id as key.
@@ -162,7 +166,8 @@ Let's again consider the same previous example but this time by using a unique i
   <li key="34cde">Bread</li>
 </ul>
 Now even if we add element to the beginning or the end, we won't face an issue since keys are different.
-Since React tracks all list items with their key attribute, after adding a new element it would not re-render the previous list items.
+Since React tracks all list items with their key attribute, after adding a new element it would not 
+re-render the previous list items.
 <ul>
   <li key="45htl">Milk</li>
   <li key="12abc">Milk</li>
@@ -171,7 +176,8 @@ Since React tracks all list items with their key attribute, after adding a new e
   <li key="85kgt">Milk</li>
 </ul>
 In the below example, the first list is created using index as key and in the second using id as key.
-On deleting the item from the first list, we can see the whole list is getting re-rendered, while in the second list the original list remains intact only the targeted element is removed.
+On deleting the item from the first list, we can see the whole list is getting re-rendered, while in the 
+second list the original list remains intact only the targeted element is removed.
 So, in case the list is large with complex components it might cause a huge performance issue.
 
 
@@ -181,7 +187,8 @@ When you know reordering of lists: Sorting, Filtering is not going to happen.
 In the absence of an id.
 SUMMARY
 Always prefer using a unique id as value for the key attribute in a list and avoid using index.
-Using index might result in performance issues and data binding issues in case reordering in the form of sorting, filtering might happen.
+Using index might result in performance issues and data binding issues in case reordering in the form of 
+sorting, filtering might happen.
 
 11) What is props in React? Ways to ?
 A11) Props in react refers to properties. It basically means the argument and parameter list in react in 
@@ -192,6 +199,6 @@ It gives a way to pass data from one component to other components. It is simila
 Props are passed to the component in the same way as arguments passed in a function.
 
 12) What is a Config Driven UI ?
-A12) In backend controls the UI , suppose we have a UI which shows carousels list of restaurents in different cities
-the data will be different so if in some cities there is no carousels it will not give any data from backend
-Hence, it will only show list of restaurents.
+A12) In backend controls the UI , suppose we have a UI which shows carousels list of restaurents in 
+different cities the data will be different so if in some cities there is no carousels it will not give 
+any data from backend. Hence, it will only show list of restaurents.

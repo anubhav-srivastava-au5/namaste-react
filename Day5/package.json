@@ -1,0 +1,23 @@
+{
+  "name": "day5",
+  "version": "1.0.0",
+  "description": "day5 namaste react",
+  "scripts": {
+    "start" : "parcel Assignment5-code.html",
+    "build" : "parcel build Assignment5-code.html"
+  },
+  "author": "Anubhav Srivastava",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "maintained node versions"
+  ]
+}

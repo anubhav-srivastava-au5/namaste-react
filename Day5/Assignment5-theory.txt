@@ -1,0 +1,31 @@
+                Chapter 05 - Assignment - Let's get Hooked!
+
+
+1) What is the difference between Named export, default export and * as export?
+A1) Named export -> we can directly export adding export keyword whenever we declare variable called as
+Named export. we can use export in many component to export in 1 file.
+Default export -> We can export component using export default and the component name so that it can be
+imported and used in other files. we can export default only 1 component in 1 file.
+
+In default import we dont use curly braces while in named import we use it.
+
+Also , we can use both in 1 file export and default export.
+
+* as is used so that we can import exported function as object. so that  we can use obj.title to import
+and use. 
+
+2) What is the importance of config.js file?
+A2) config.js file or constant.js file is used to write all hard coded data used in application. so that
+if we want to update anything we wont search each file.
+
+3) What are React Hooks?
+A3) React hooks are nothing but a normal function.
+
+4) Why do we need a useState hook?
+A4) We need useState hook to because if we use normal way of writing variables react cannot take count
+of each variable and which is updating and when, hence it wont be able to render it.
+If we use useState state variables react can take record of it and able to change if there is any change 
+in the variable.
+const a=10; //normal variable
+
+const [searchKeyword,setSearchKeyword]=useState("kfc") //state variable via usestate. kfc is default value of search keyword.

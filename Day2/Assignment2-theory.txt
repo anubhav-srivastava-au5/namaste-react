@@ -34,12 +34,15 @@ we dont need to refresh whole page in an application.
 Q8) List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words?
 A8) 5 superpowers of parcel are:-
 a) Cleaning our code. -> It cleans our code by removing all console.log. and checks which package are not in use 
-hence, remove them while building application. 
+hence, remove them while building application. //we need to install separate plugin for it parcel himself does not 
+provide such feature. 
 b) It can create dev and production build.
 c) Zero config. -> We didn't want to config anything to get it running we can simpliy install and use.
 d) Compatible with older version of browser and can config. them through package.json. -> We can update in 
 which browser our application should work.
 e) Can create https server. -> we can see if any error we will face when project is live.
+f) Tree shaking -> It helps in removing unnecessary functions of the module we are not using in our application
+which reduces the size of our application.
 
 Q9) What is `.gitignore`? What should we add and not add into it?
 A9) .gitignore is a file which helps git to understand what all files should not be included while pushing
@@ -50,7 +53,7 @@ node_modules should be kept in .gitignore because it can auto-generated with cmd
 dist and parcel-cache folder should be kept in .gitignore because we can generate them with build cmd.
 
 Q10) What is the difference between `package.json` and `package-lock.json`?
-A10) Package.json file is used to keep details about project like author name , project 
+A10) Package.json file is used to keep details about project like author name , project ,
 description, license, what all dependencies and dev-dependencies used.
 while Package-lock.json file used to keep track of the dependencies and updated version of them, it is also used
 to create node-modules tree structure which helps in creating same project on other person machine.
