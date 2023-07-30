@@ -1,0 +1,82 @@
+                Chapter 06 - Assignment - Exploring the world
+
+
+1) What is a Microservice?
+A1) Microservices are an architectural and organizational approach to software development where software 
+is composed of small independent services that communicate over well-defined APIs. These services are 
+owned by small, self-contained teams.
+
+2) What is Monolithic architecture?
+A2) A monolithic architecture is a singular, large computing network with one code base that couples all 
+of the business concerns together. To make a change to this sort of application requires updating the 
+entire stack by accessing the code base and building and deploying an updated version of the service-side 
+interface.
+
+3) What is the difference between monolithic and Microservice?
+A3) Plz refer this atlassian blog :-> https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith#:~:text=A%20monolithic%20application%20is%20built,on%20a%20number%20of%20factors.
+
+4) Why do we need a useEffect hook?
+A4) useEffect hook is used to fetch api and load data. It is executed when all data is fetched from the api.
+It also has option to pass the parameter how frequently or when we need to load the data called as 
+dependency array. If we keep dependency array empty it loads data once.
+
+5) What is optional chaining?
+A5) optional chaining is new feature of javascript introduced in es2020. It helps us if we are fetching any
+key nested to any obj it gives us option as if the key is not present it wont break the code, it will return
+undefined if reference is null else value of nested property is accessed.
+
+6) What is SHIMMER UI?
+A6) A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout 
+and shapes of the content that will eventually appear. It uses a gradient animation that creates a 
+shimmering effect over the placeholders, giving the user a sense of motion and progress.
+
+before shimmer ui or still plz use to give something like loading..... or any text or html which is not
+user friendly. hence shimmer ui is introduced which mimics the structure which works according to human
+tendency and people wait as if data is coming.
+
+7) What is the difference between JS expression and JS statement?
+A7) JS expression is a one line of javascript code while JS statement is multi line js code.
+
+An expression is a block of code that evaluates to a value. A statement is any block of code that is 
+performing some action. The distinction between an expression and a statement is important because an 
+expression is a subset of a statement.
+
+In react, in curly braces "{}" we write js expression everytime if we want to write js statement we need to 
+wrap up js statement subset js expression in round braces "()".
+
+8) What is Conditional Rendering, explain with a code example?
+A8) Conditional rendering is an option which we can write as ternary operator whenever fe is waiting for 
+data we can load anything like shimmer ui so that there is no loading stuff or empty screen infront of 
+user.
+
+In React, conditional rendering is the process of displaying different content based on certain conditions 
+or states. It allows you to create dynamic user interfaces that can adapt to changes in data and user 
+interactions. In this process, you can use conditional statements to decide what content should be 
+rendered.
+
+It basically give us option to render 2 different things according to need or selection of the user.
+
+write code........
+
+9) What is CORS?
+A9) Cross-origin resource sharing (CORS) is a browser security feature that restricts cross-origin HTTP 
+requests that are initiated from scripts running in the browser.
+
+What is the role of CORS?
+CORS is a protocol and security standard for browsers that helps to maintain the integrity of a website 
+and secure it from unauthorized access. It enables JavaScripts running in browsers to connect to APIs and 
+other web resources like fonts, and stylesheets from multiple different providers.
+
+cors is a browser security which restricts fetching data from any outside domain.
+
+10) What is async and await? 
+A10)  The purpose of async / await is to simplify the syntax necessary to consume promise-based APIs.
+Async functions always return a promise.
+Async await works in function only. whenever we add async keyword in a function it allows us to use await
+keyword in any asynchronous request for which it behaves like synchronus..... as in it will wait till 
+it didn't give any response.
+
+read it -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+11) What is the use of `const json = await data.json();` in  getRestaurants()?
+A11) It helps getting data which we get from api call in json format so that we can easily map it in fe.
