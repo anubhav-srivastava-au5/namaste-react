@@ -1,0 +1,33 @@
+                Chapter 06 - Assignment - Finding the Path
+
+
+1) What are various ways to add images into our App? Explain with code examples?
+A1) We can add images through import which works when image is available in local directory, so that we 
+can import in our project.
+
+we can use cdn links or url of cloud storage in img tag.
+
+2) What would happen if we do console.log(useState())?
+A2) use state is a function.
+
+Anything that starts with use in react is called as hook. hook is nothing but a function that gives 
+superpower like useState gives us power to create dynamic variable that can change its data on web App
+without loading the page.
+
+3) How will useEffect behave if we don't add a dependency array?
+A3) If we dont add dependency array in useEffect is will be call the callback function of useEffect 
+everytime its renders the page.
+there are other options too like keeping empty array which allows to callback function once while 
+if we add anything in dependency array then it will be called everytime that variable is changed
+like if we have added any useState variable in it so it will call callback function everytime it changes
+the value of the variable.
+
+4) What is SPA?
+A4) SPA denotes single page application, what happens in old days is whenever we route to another page
+we reload the page hence it call the api's on page etc. (it should not make any network call or load pages.)
+but in react app it does not load any pages. 
+
+5) What is difference between Client side routing and server side routing?
+A5) Server side routing is old way of creating application. means need to load every page whenever we click.
+But, Client side routing is new way of routing which means no need to load anything it is already loaded 
+at once.
