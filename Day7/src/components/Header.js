@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import Login from "./Login";
 
 export const Title = () => (
     <a href='/'>
@@ -31,12 +32,18 @@ const HeaderComponent = () => {
 
             </div>
             {
-                isLoggedIn ?   <button className="signin" onClick={()=>{
-                    setIsLoggedIn(false)
-                }}>Login</button> :
+                <Link to="/login">
                 <button className="signin" onClick={()=>{
-                    setIsLoggedIn(true)
-                }}>Logout</button>
+                        <Login />
+                }}>Login</button> 
+                </Link>
+                // isLoggedIn ?   <button className="signin" onClick={()=>{
+                //     setIsLoggedIn(false)
+                // }}>Login</button> :
+                // <button className="signin" onClick={()=>{
+                //     <Register />
+                //     setIsLoggedIn(true)
+                // }}>Logout</button>
             }
             {/* <button className="signin" onClick={()=>{
                 (signIn) ?setSignIn(false) : setSignIn(true)

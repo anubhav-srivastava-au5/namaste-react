@@ -62,3 +62,37 @@
     width:300px;
     height: 500x;
 }
+
+.register-img > img {
+    width:150px;
+    height: 150px;
+    margin-left: 80%;
+}
+
+.login-img > img {
+    width:150px;
+    height: 150px;
+    margin-left: 80%;
+}
+
+.register-heading {
+    display: flex;
+    flex-wrap: wrap;
+}
+.login-heading {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.register-heading > div >h4 {
+    color: orangered;
+}
+
+.login-heading > div >h4 {
+    color: orangered;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}
