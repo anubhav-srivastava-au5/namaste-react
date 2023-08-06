@@ -1,4 +1,4 @@
-                Chapter 06 - Assignment - Finding the Path
+                Chapter 07 - Assignment - Finding the Path
 
 
 1) What are various ways to add images into our App? Explain with code examples?

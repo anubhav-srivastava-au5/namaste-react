@@ -1,0 +1,25 @@
+{
+  "name": "day8",
+  "version": "1.0.0",
+  "description": "day8 namaste react",
+  "scripts": {
+    "start": "parcel Assignment8-code.html",
+    "build": "parcel build Assignment8-code.html"
+  },
+  "author": "Anubhav Srivastava",
+  "license": "ISC",
+  "dependencies": {
+    "formik": "^2.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "maintained node versions"
+  ]
+}

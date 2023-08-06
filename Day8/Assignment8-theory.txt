@@ -1,0 +1,50 @@
+                Chapter 08 - Assignment - Let's get Classy
+
+
+1) How do you create Nested Routes react-router-dom cofiguration?
+A1) We can create nested routes by making children inside children.
+e.g. -> /about/profile
+ We should remember few things:
+a) The nested children path should not contain '/' (slash) bcoz / (slash) means root and we dont need to 
+write so.
+
+2) Read abt createHashRouter, createMemoryRouter from React Router docs?
+A2) HashRouter: When we have small client side applications which doesn't need backend we can use 
+HashRouter because when we use hashes in the URL/location bar browser doesn't make a server request.
+
+BrowserRouter: When we have big production-ready applications which serve backend, it is recommended to 
+use <BrowserRouter>.
+
+Memory Router: The memory router keeps the URL changes in memory not in the user browsers. It keeps the 
+history of the URL in memory and it does not read or write to the address bar so the user can not use the 
+browser's back button as well as the forward button. It doesn't change the URL in your browser.
+
+3) What is the order of life cycle method calls in Class Based Components?
+A3) Order of life cycle method calls in class based Components are:
+constructor > render > component Did mount > component Did update > component will unmount (on page change).
+
+this order will differ on having child and async component did mount.
+
+4) Why do we use componentDidMount?
+A4) We use componentDidMount to load after initial render. componentDidMount works as useEffect in 
+functional component. We can use it call Api's.
+
+5) Why do we use componentWillUnmount? Show with example?
+A5) componentWillUnmount is called when we change the page. It is used to clear the variables so that 
+they are not called in other page. It was used in class based component.
+For e.g. :-> if we have called a settimeout in 1 page (component) and we move to other and we have not 
+cleared it . It will be called in every page and can be called every time twice thrice which will load 
+the browser.  above can be fixed by clearInterval.
+
+The exact same issue is in functional component settimeout which can be solved by calling return in 
+useEffect.
+
+
+
+Research Questions :
+
+1) (Research) Why do we use super(props) in constructor?
+A1) 
+
+2) (Research) Why can't we have the callback function of useEffect async?
+A2) 
