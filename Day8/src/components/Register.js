@@ -7,7 +7,7 @@ const Register = () => (
   <div className='register-page'>
    <div className='register-heading'>
     <div>
-    <h1>Login</h1>
+    <h1>Sign up</h1>
     <Link to="/login"><h4 >or login to your account</h4></Link>
     </div>
     <div className='register-img'>
@@ -41,7 +41,7 @@ const Register = () => (
           <Field type="password" name="password" placeHolder="password" />
           <ErrorMessage name="password" component="div" />
           <button type="submit" disabled={isSubmitting}>
-            Login
+            Sign up 
           </button>
         </Form>
       )}
