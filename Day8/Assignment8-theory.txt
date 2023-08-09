@@ -27,7 +27,7 @@ this order will differ on having child and async component did mount.
 
 4) Why do we use componentDidMount?
 A4) We use componentDidMount to load after initial render. componentDidMount works as useEffect in 
-functional component. We can use it call Api's.
+functional component. We can use it to call Api's.
 
 5) Why do we use componentWillUnmount? Show with example?
 A5) componentWillUnmount is called when we change the page. It is used to clear the variables so that 
@@ -44,7 +44,8 @@ useEffect.
 Research Questions :
 
 1) (Research) Why do we use super(props) in constructor?
-A1) 
+A1) Basically , we write super(props) so that we can use this keyword in our class based component.
 
 2) (Research) Why can't we have the callback function of useEffect async?
-A2) 
+A2) We cann't use async in useEffect callback function because it returns either undefined or data if we
+use async in callback function it will return back the promise.
