@@ -1,0 +1,46 @@
+                Chapter 09 - Assignment - Optimising our App
+
+
+1) When and why do we need lazy()?
+A1) lazy() is a named import we get it from react library it is a super power which helps us to load 
+component with separate bundler or create a separate bundler for that particular import.
+
+We need it when there is so much code because in the end fe libraries uses bundlers which sum up all html,
+css,js code in 1 file each. hence if we load everything in i js file it will be heavy and big file and it
+is not a good practice Hence, we can use something like lazy and suspense which can create separate files
+to load whenever we load the modules.
+
+2) What is suspense?
+A2) Suspense is an component which stop and handles the component which we are loading when we are using
+lazy bcoz lazy returns promise (in short takes time bcoz it calls the callback function) which suspense 
+manages so, it has something called fallback which can be used to write something like shimmer if bundler
+is taking time to load or net is slow of user to load it quickly so that user has better experience.
+
+3) Why we got this error : A component suspended while responding to synchronous input. This will cause 
+the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with 
+startTransition? How does suspense fix this error?
+A3)  We get this error because lazy returns promise which comes under asynchronus task. Hence, we need 
+something called suspense which comes from react library by which we can wrap our component inside it 
+which waits for component to load its bundle to be loaded. Also, it gives cool feature like fallback which 
+can be used to show (shimmer or loading page) something while it is loading. 
+
+4) Advantages and disadvantages of using this code splitting pattern?
+A4) Code splitting pattern is only required when we are creating big applications which contains 100s of
+component as a result keeping all js in 1 bundler file is not feasible.
+
+disadvantages are:->
+a) Increased complexity in development and testing processes.
+b) More network requests that can affect performance,
+c) Additional code and dependencies that can increase the bundle size.
+
+Advantages are:->
+a) It lazy load file on demand.
+b) It improves performance of react application.
+
+5) When do we and why do we need suspense?
+A5) We need suspense when we are using lazy from react library it helps in waiting for import made by lazy
+because it return promise which need to be resolved hence it waits and till it waits it give an option 
+known as fallback to show anything like shimmer or loading page by default.
+
+In clear words, we need it bcoz in backend this in not available in our js file which is loaded , we need
+to add a separate bundler file for it which will take some ms hence we need to wait till it loads.
