@@ -1,8 +1,6 @@
 import * as config from '../config';
 
-
 const RestaurentCard = ({cloudinaryImageId,name,cuisines,avgRating}) => {
-    // console.log(cuisines,"-------------cuisinessssssssss")
     return (
         <div className='card'>
             <img alt="card" src={`${config.cloudinaryUrl}${cloudinaryImageId}`} />
@@ -12,5 +10,6 @@ const RestaurentCard = ({cloudinaryImageId,name,cuisines,avgRating}) => {
         </div>
     )
 }
+
 
 export default RestaurentCard;
