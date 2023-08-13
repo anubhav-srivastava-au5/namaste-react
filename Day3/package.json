@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "day3 namaste react",
   "scripts": {
-    "start" : "parcel Assignment3-code.html",
-    "build" : "parcel build Assignment3-code.html"
+    "start": "parcel Assignment3-code.html",
+    "build": "parcel build Assignment3-code.html"
   },
   "author": "Anubhav Srivastava",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
   },
