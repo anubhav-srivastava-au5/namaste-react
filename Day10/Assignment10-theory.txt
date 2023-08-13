@@ -1,0 +1,51 @@
+                Chapter 10 - Assignment - Jo dikhta hai vo bikta hai
+
+
+1) Explore all the ways of writing css?
+A1) There are many ways of writing css, some are:
+a) normal css -> we give css file path in html file and write css in separate file.
+b) SCSS/SASS -> It give feature to reuse the css by declaring css in a variable.
+c) Inline css -> we can write css then and there only by wrapping in curly braces in react also there are
+some changes like using camel case,etc.
+d) using libraries like material UI , chakra UI, base UI, Ant design we can install them and use the only
+limitation i can think is the constraint they give like they will give suppose button so we can use it in 
+that way only.
+e) Using framework (Tailwind css) -> It is cool new way which can be added in our parcel so that everytime 
+it bundles it creates css as well and we use it as dependency array so that bundle size is less too bcoz 
+whatever we added css it convert it in normal css and make separate file for it.
+
+2) How do we configure Tailwind?
+A2) We can refer to documentation and see the installation steps it vary according to the project and 
+what use in the project.
+As i am using parcel as bundler i am writing steps for it:
+a) Install tailwindcss and postcss as dev-dependency in project using npm . postcss is used to convert 
+tailwindcss to normal css.
+b) execute tailwind css with npx cmd -> npx tailwindcss init
+It will create tailwind config file named tailwind.config.js where we can mention or configure our css 
+requirements. 
+c)
+d) when using tailwind css the .css file which we are using need to write @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+After above steps our tailwind css is configured we can run our parcel cmd and write css in every tag.
+
+3) In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+A3) content -> content keyword is used to mention the extension where we use tailwind css in src folder.
+
+theme: { extend: {} },: This section is where you can customize the default styles and behavior of 
+Tailwind CSS. Inside the extend object, you can add new properties to extend or override existing theme 
+settings.
+
+plugins: [],: This section is used to configure any additional plugins you might want to use with Tailwind 
+CSS. Plugins can add new utility classes or customize existing ones.
+
+In summary, this tailwind.config.js file is telling Tailwind CSS to scan your HTML and JavaScript files 
+within the src directory for class usage, and it provides the basic structure for customizing the 
+framework's default settings and behaviors. You can add more properties inside the extend object to 
+customize colors, fonts, spacing, breakpoints, and more.
+
+4) Why do we have .postcssrc file?
+A4) The .postcssrc file is used to configure the behavior and settings of the PostCSS tool. PostCSS is a 
+popular and powerful tool for transforming CSS with JavaScript plugins. It allows you to apply various 
+transformations and enhancements to your CSS code, such as autoprefixing, minification, nesting, and more.
