@@ -1,0 +1,23 @@
+                Chapter 11 - Assignment - Data is the new Oil
+
+
+1) What is prop drilling?
+A1) Anyone who has worked in React would have faced this and if not then will face it definitely. 
+Prop drilling is basically a situation when the same data is being sent at almost every level due to 
+requirements in the final level. Here is a diagram to demonstrate it better. Data needed to be sent from 
+Parent to childC. In this article different ways to do that are discussed.
+In above example data sharing from parent to childA , childA to childB and then childB to childC is called
+prop drilling, also data is unecessary present in childA and childB.
+
+2) What is lifting the state up?
+A2) Lifting the state up is the term given to when we need to give power to parent to dynamically handle
+its children.
+
+3) What is context provider and context consumer in react?
+A3) context provider is used to pass the fetched data from the api and update the dummy context data.
+while context consumer is used to do what useContext hook does for functional component, it basically 
+get data from global context variable in the application for class based component.
+
+4) If you don't pass a value to the provider does it take the default value?
+A4) No, if we have used the provider to pass the value then it must pass the correct variables else it 
+will give the error as undefined or parcel error if we didn't pass anything.
