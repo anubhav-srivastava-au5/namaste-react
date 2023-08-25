@@ -1,0 +1,48 @@
+                Chapter 13 - Assignment - Time for the test
+
+
+1) What are different types for testing?
+A1) types of testing are:-
+a) Manual testing -> done by human.
+b) Automation testing -> code testing code , tools used selenium.
+c) E2E testing -> end to end testing. covers entire user journey. it is handed over to QA team.
+
+FYI :-> Headless browser is faster because it does not need to show or render UI part. 
+
+d) Unit testing :-> core job of developer . each developer should perform it.
+e) Integration testing :-> done by developer. Testing between 2 components.
+f) Regression testing.
+g) Smoke testing.
+h) Performance testng.
+
+2) What is Enzyme?
+A2) Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and 
+traverse your React Components' output. It was developed at Airbnb and later transferred to an independent 
+organization.
+
+
+3) Enzyme vs React Testing Library?
+A3) Enzyme works best with class-based components.
+React Testing Library will perform better in functional-based components. The official React documentation 
+recommends using it whenever possible.
+
+plz refer here:-> https://codilime.com/blog/enzyme-vs-react-testing-library/#:~:text=Enzyme%20works%20best%20with%20class%2Dbased%20components.&text=React%20Testing%20Library%20will%20perform,recommends%20using%20it%20whenever%20possible.
+
+4) What is Jest and why do we use it?
+A4) Jest is an open-source testing framework built on JavaScript, designed majorly to work with React and 
+React Native-based web applications. Often, unit tests are not very useful when run on the front end of 
+any software.
+
+plz refer here :-> https://www.javatpoint.com/jest-framework
+
+steps done for testing:->
+
+installed react testig library -> npm i -D @testing-library/react
+install jest -> npm i -D jest 
+now run jest to configure -> npx jest --init -------> to create jest.config.js file once.
+jest-environment-jsdom need to install dev dependency.
+
+created first test case
+configured babel for import syntax issue.
+wrote expect sum
+gitignore coverage folder
