@@ -12,6 +12,7 @@ const useRestaurantDetails = (resId) =>{
         let json = await data.json();
         let arr = json?.data?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
         json = json?.data?.cards[0].card?.card?.info;
+        
         setRestaurantDetails(json);
         setRestaurantMenu(arr);
     }

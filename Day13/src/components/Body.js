@@ -1,4 +1,4 @@
-import { useState,useContext } from 'react';
+import { useState,useEffect,useContext } from 'react';
 import RestaurentCard from './RestaurentCard';
 import Shimmer from './Shimmer';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -8,13 +8,19 @@ import userContext from '../utils/UserContext';
 
 const Body = () => {
     const [searchKeyword, setSearchKeyword] = useState("");
-    let [filteredRestaurent,setFilteredRestaurent] = useState("");
-    console.log("rendersearch",searchKeyword)
-    const restaurantCard = useRestaurantCard();
-    const restaurent = restaurantCard[0];
-    filteredRestaurent = restaurantCard[1];
+    let [filteredRestaurent,setFilteredRestaurent] = useState([]);
+    // console.log("rendersearch",searchKeyword)
+    console.log(filteredRestaurent,"-------------filteredRestaurent-----",useRestaurantCard())
+    // let restaurantCard = useRestaurantCard();
+    // let restaurent = restaurantCard;
+    // console.log(restaurent,"--------restaurent")
+    // useEffect(()=>{
+    //     filteredRestaurent=useRestaurantCard()
+    // },[])
+    // filteredRestaurent = restaurantCard[1];
+    // console.log(restaurent?.length,"--------ressssssss---------",filteredRestaurent)
     const {user,setUser}=useContext(userContext)
-    return restaurent?.length == 0 ?
+    return filteredRestaurent?.length == 0 ?
         (<Shimmer />)
         : (
             <>
@@ -24,7 +30,8 @@ const Body = () => {
                             setSearchKeyword(e.target.value)
                         }} />
                     <button className=" shadow-lg rounded-lg font-medium w-20" onClick={() => {
-                        const filteredData = filterData(searchKeyword, restaurent)
+                        const filteredData = filterData(searchKeyword, filteredRestaurent)
+                        // restaurent=filteredData
                         setFilteredRestaurent(filteredData)
                     }}>Search</button>
                     <input  value={user.name} onChange={(e)=>
@@ -42,7 +49,7 @@ const Body = () => {
                     }}/>
                 </div>
                 <div className='flex flex-wrap bg-purple-200 shadow-2xl '>
-                    {filteredRestaurent === undefined ? <h1>No data found...</h1> :
+                    {filteredRestaurent.length === undefined ? <h1>No data found...</h1> :
                         filteredRestaurent.map((res) => {
                             return (
                                 <Link to={"/restaurant/" + res?.info?.id}
