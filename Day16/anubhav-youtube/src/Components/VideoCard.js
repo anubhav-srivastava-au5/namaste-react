@@ -8,7 +8,7 @@ const VideoCard = ({ info }) => {
     let hoursAgo = Math.floor(timeDifference / (1000 * 60 * 60));
     // console.log(hoursAgo + ' hours ago');
     return (
-        <div className="p-2 m-2 w-96 rounded-lg">
+        <div className="p-5 m-2 w-96 rounded-lg">
             <img className="rounded-lg" alt="thumbnail-image" src={thumbnails.medium.url} />
             <ul className="py-2">
             <li className="font-bold py-2">{title}</li>
